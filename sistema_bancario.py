@@ -1,7 +1,6 @@
 from abc import ABC, abstractclassmethod, abstractproperty
 from datetime import datetime
 
-
 class Cliente:
     def __init__(self, endereco):
         self.endereco = endereco
@@ -13,14 +12,12 @@ class Cliente:
     def adicionar_conta(self, conta):
         self.contas.append(conta)
 
-
 class PessoaFisica(Cliente):
     def __init__(self, nome, data_nascimento, cpf, endereco):
         super().__init__(endereco)
         self.nome = nome
         self.data_nascimento = data_nascimento
         self.cpf = cpf
-
 
 class Historico:
     def __init__(self):
@@ -39,7 +36,6 @@ class Historico:
             }
         )
 
-
 class Transacao(ABC):
     @property
     @abstractproperty
@@ -49,7 +45,6 @@ class Transacao(ABC):
     @abstractclassmethod
     def registrar(self, conta):
         pass
-
 
 class Saque(Transacao):
     def __init__(self, valor):
@@ -65,7 +60,6 @@ class Saque(Transacao):
         if sucesso_transacao:
             conta.historico.adicionar_transacao(self)
 
-
 class Deposito(Transacao):
     def __init__(self, valor):
         self._valor = valor
@@ -79,7 +73,6 @@ class Deposito(Transacao):
 
         if sucesso_transacao:
             conta.historico.adicionar_transacao(self)
-
 
 class Conta:
     def __init__(self, numero, cliente):
@@ -136,7 +129,6 @@ class Conta:
         else:
             print("\n@@@ Operação falhou! O valor informado é inválido. @@@")
             return False
-
 
 class ContaCorrente(Conta):
     def __init__(self, numero, cliente, limite=500, limite_saques=3):
