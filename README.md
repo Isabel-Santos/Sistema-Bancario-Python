@@ -10,7 +10,6 @@ Este projeto é um sistema bancário simples desenvolvido em Python, que permite
 - **Cadastro de Usuário**: Possibilita o registro de novos usuários.
 - **Cadastro de Conta Bancária**: Permite a criação de contas bancárias para os usuários cadastrados.
 
-
 ## Requisitos
 
 - Python 3.x
