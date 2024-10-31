@@ -4,11 +4,23 @@ Este projeto é um sistema bancário simples desenvolvido em Python, que permite
 
 ## Funcionalidades
 
-- **Depósito**: Permite que os usuários façam depósitos com valores positivos na conta.
-- **Saque**: Permite que os usuários realizem saques, com limite diário de R$500,00 e um limite de 3 saques por dia.
-- **Extrato**: Exibe um extrato das movimentações realizadas (depósitos e saques) realizadas, incluindo o saldo atual.
-- **Cadastro de Usuário**: Possibilita o registro de novos usuários.
-- **Cadastro de Conta Bancária**: Permite a criação de contas bancárias para os usuários cadastrados.
+- **Cadastro de Clientes**: Permite o registro de clientes no sistema, incluindo dados pessoais.
+- **Gerenciamento de Contas**: Os clientes podem ter múltiplas contas, e o sistema suporta operações como depósitos e saques.
+- **Registro de Transações**: Todas as transações são registradas, permitindo a consulta do histórico de operações.
+- **Limites de Saque**: Contas correntes podem ter limites de saque definidos.
+
+## Estrutura do Código
+
+O sistema é dividido em várias classes:
+
+- **Cliente**: Classe base para os clientes do banco.
+- **PessoaFisica**: Classe derivada que representa clientes pessoas físicas.
+- **Conta**: Classe base para diferentes tipos de contas.
+- **ContaCorrente**: Classe derivada que implementa contas correntes.
+- **Transacao**: Classe abstrata para representar transações financeiras.
+- **Saque**: Classe que representa a operação de saque.
+- **Deposito**: Classe que representa a operação de depósito.
+- **Historico**: Classe que armazena o histórico de transações.
 
 ## Requisitos
 
